@@ -1,0 +1,3 @@
+include ':app'
+include 'mylib'
+project(':mylib').projectDir = new File('../HelloRobolectric/hellorobolectriclibrary')
