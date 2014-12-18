@@ -1,4 +1,4 @@
-package com.nolanlawson.hellorobolectriclibrary;
+package com.nolanlawson.hellorobolectricapp;
 
 import android.content.Context;
 
@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
 /**
  * Created by nlawson on 12/18/14.
  */
-public class HelloRobolectricLibrary {
+public class LocalHelper {
 
   public static String saySomethingCool(Context context) {
 
@@ -18,7 +18,7 @@ public class HelloRobolectricLibrary {
       InputStream in = null;
 
       try {
-        in = context.getResources().openRawResource(R.raw.library_file);
+        in = context.getResources().openRawResource(R.raw.local_file);
         return read(in);
       } finally {
         if (in != null) {

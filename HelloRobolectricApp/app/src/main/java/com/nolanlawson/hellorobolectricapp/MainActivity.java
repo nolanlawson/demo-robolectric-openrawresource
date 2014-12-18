@@ -1,6 +1,6 @@
 package com.nolanlawson.hellorobolectricapp;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -9,7 +9,7 @@ import android.widget.TextView;
 import com.nolanlawson.hellorobolectriclibrary.HelloRobolectricLibrary;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -17,9 +17,13 @@ public class MainActivity extends ActionBarActivity {
     setContentView(R.layout.activity_main);
 
 
-    TextView textView = (TextView) findViewById(android.R.id.text1);
+    TextView textView1 = (TextView) findViewById(android.R.id.text1);
 
-    textView.setText(HelloRobolectricLibrary.saySomethingCool(this));
+    textView1.setText(LocalHelper.saySomethingCool(this));
+
+    TextView textView2 = (TextView) findViewById(android.R.id.text2);
+
+    textView2.setText(HelloRobolectricLibrary.saySomethingCool(this));
   }
 
 
